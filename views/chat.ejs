@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatsappt</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>    
+    <form method="get" action="http://localhost:3000/chats/new">
+        <button>create new chat</button>
+    </form>
+    
+    <%for(let chat of chats){%>
+        
+        <div>
+        <p>from:<%=chat.from%></p> 
+        <p class="msg">message:<%=chat.msg%></p>
+        <p>received by:<%=chat.to%></p>
+         <p>date:<%=chat.created_at.toString().split(" ").slice(1,4).join("---")%></p>
+        
+        <form method="get" action="http://localhost:3000/chats/<%=chat.id%>/edit">
+            <button>edit</button>
+        </form>
+        <form action="http://localhost:3000/chats/<%=chat.id%>/delete?_method=delete" method="post">
+            <button>delete</button>
+        </form>
+    </div>
+      
+    <%}%>
+
+</body>
+</html>

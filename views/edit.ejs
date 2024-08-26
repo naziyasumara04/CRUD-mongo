@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit page</title>
+</head>
+<body>
+    <h1>Edit message here</h1>
+        <form action="http://localhost:3000/chats/<%= chats.id %>?_method=PUT" method="post">
+        <textarea id="msg" name="msg" placeholder="edit message here"></textarea>
+        <button>edit</button>
+    </form>
+   
+</body>
+</html>

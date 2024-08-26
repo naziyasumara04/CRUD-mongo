@@ -1,0 +1,15 @@
+
+div{
+    background-color: rgb(203, 241, 228);
+    border:2px solid black;
+    margin:10px;
+    padding:20px;
+    border-radius: 20px;
+    display: inline-block;
+}
+div .msg{
+background-color: rgb(78, 78, 238);
+color:white;
+padding:5px;
+border-radius:5px;
+}
